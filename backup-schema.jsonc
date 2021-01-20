@@ -1,0 +1,32 @@
+{
+  "smses": {
+    "count": "int",
+    "mms": [
+      {
+        "address": "int | string", // string når det er +47, int ellers
+        "contact_name": "string",
+        "date": "int (epoch)",
+        "parts": {
+          "part": [ // mms med tekst har en egen part for teksten + x parts for bilder (eller hvertfall en)
+            {
+              "cl": "string", // image0000.png
+              "ct": "string", // image/png, application/smil(kan nok ignoreres), text/plain - meldinger med smileys? finner sms'er med det også.. Hm :/
+              "data": "string",
+              "text": "string"
+            }
+          ]
+        },
+        "readable_date": "string" // 1. jun. 2018 22:50:43
+      }
+    ],
+    "sms": [
+      {
+        "address": "int | string", // string når det er +47, int ellers
+        "body": "string",
+        "contact_name": "string",
+        "date": "int (epoch)",
+        "readable_date": "string"
+      }
+    ]
+  }
+}
