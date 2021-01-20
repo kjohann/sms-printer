@@ -5,4 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364)
+}
+
+* {
+  box-sizing: border-box;
 }
