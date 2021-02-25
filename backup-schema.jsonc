@@ -16,6 +16,7 @@
             }
           ]
         },
+        "text_only": "0 | 1", // raskere enn å parse parts for å finne ut
         "readable_date": "string" // 1. jun. 2018 22:50:43
       }
     ],
@@ -23,6 +24,7 @@
       {
         "address": "int | string", // string når det er +47, int ellers
         "body": "string",
+        "type": "int (enum?)", // 1 = innkommende, 2 = utgående
         "contact_name": "string",
         "date": "int (epoch)",
         "readable_date": "string"

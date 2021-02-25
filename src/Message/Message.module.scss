@@ -1,10 +1,18 @@
 .Message {
   position: relative;
+  // display: inline-block;
   break-inside: avoid;
   justify-content: flex-start;
   display: flex;
   margin-bottom: 1rem;
   height: 100%;
+
+  // &::after {
+  //   display:block;
+  //   height:0px;
+  //   content: '';
+  //   visibility: hidden;
+  // }
 
   &--right {
     flex-direction: row-reverse;
@@ -22,10 +30,19 @@
     }
   }
 
-  &-content {
+  &-bubble {
     max-width: 80%;
     border-radius: 0.75rem;
     background: lightblue;
     padding: 0.5rem 1rem;
+  }
+
+  &--right  &-timestamp {
+    float: right;
+  }
+
+  &-timestamp {
+    font-size: 0.5rem;
+    padding-top: 0.5rem;
   }
 }
