@@ -1,18 +1,9 @@
 .Message {
   position: relative;
-  // display: inline-block;
   break-inside: avoid;
-  justify-content: flex-start;
   display: flex;
   margin-bottom: 1rem;
   height: 100%;
-
-  // &::after {
-  //   display:block;
-  //   height:0px;
-  //   content: '';
-  //   visibility: hidden;
-  // }
 
   &--right {
     flex-direction: row-reverse;
@@ -31,7 +22,7 @@
   }
 
   &-bubble {
-    max-width: 80%;
+    max-width: 70%;
     border-radius: 0.75rem;
     background: lightblue;
     padding: 0.5rem 1rem;

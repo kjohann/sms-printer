@@ -1,7 +1,5 @@
 .Message-View {
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 90%;
   max-width: 1290px;
   margin: 50px auto;
@@ -21,7 +19,4 @@
     margin: 0;
   }
 
-  body {
-    background: none;
-  }
 }
