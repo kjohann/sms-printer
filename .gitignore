@@ -8,6 +8,7 @@
 # testing
 /coverage
 test.xml
+notes.txt
 
 # production
 /build

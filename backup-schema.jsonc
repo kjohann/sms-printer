@@ -6,6 +6,7 @@
         "address": "int | string", // string når det er +47, int ellers
         "contact_name": "string",
         "date": "int (epoch)",
+        "date_sent": "int (epoch)",
         "parts": {
           "part": [ // mms med tekst har en egen part for teksten + x parts for bilder (eller hvertfall en)
             {
@@ -13,6 +14,13 @@
               "ct": "string", // image/png, application/smil(kan nok ignoreres), text/plain - meldinger med smileys? finner sms'er med det også.. Hm :/
               "data": "string",
               "text": "string"
+            }
+          ]
+        },
+        "addrs": {
+          "addr": [ // alltid (?) to elementer. Om en av de har en med address "insert-address-token" så er den utgående
+            {
+              "address": "int | string"
             }
           ]
         },
@@ -27,7 +35,8 @@
         "type": "int (enum?)", // 1 = innkommende, 2 = utgående
         "contact_name": "string",
         "date": "int (epoch)",
-        "readable_date": "string"
+        "readable_date": "string",
+        "date_sent": "int (epoch)"
       }
     ]
   }

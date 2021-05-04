@@ -1,19 +1,19 @@
 import React, { FunctionComponent } from 'react';
-import styles from './EntryForm.module.scss';
-import { parseSmsBackup, SmsBackup } from '../Upload/smsParser';
+import styles from './SettingsForm.module.scss';
+import { parseMessageBackup, MessageBackup } from '../Upload/messageParser';
 
-export type EntryFormProps = {
-  setBackup: React.Dispatch<React.SetStateAction<SmsBackup[]>>,
+export type SettingsFormProps = {
+  setBackup: React.Dispatch<React.SetStateAction<MessageBackup[]>>,
   setLoading: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const EntryForm: FunctionComponent<EntryFormProps> = (props) => {
+const SettingsForm: FunctionComponent<SettingsFormProps> = (props) => {
   const { setBackup, setLoading } = props;
 
   const handleFileChosen = (file: Blob) => {
     const fileReader = new FileReader();
     fileReader.onloadend = () => { 
-      setBackup(parseSmsBackup(fileReader.result as string)); 
+      setBackup(parseMessageBackup(fileReader.result as string)); 
       setLoading(false); 
     };
     setLoading(true);
@@ -21,7 +21,7 @@ const EntryForm: FunctionComponent<EntryFormProps> = (props) => {
   }
   
   return (
-    <div>
+    <div className={styles['SettingsForm']}>
       <input
         type="file"
         accept=".xml"
@@ -35,4 +35,4 @@ const EntryForm: FunctionComponent<EntryFormProps> = (props) => {
   );
 }
 
-export default EntryForm;
+export default SettingsForm;
