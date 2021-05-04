@@ -7,7 +7,7 @@
   border: 1px outset;
   border-radius: 0.125rem;
   box-shadow: 1.5px 1.5px rgb(29, 25, 25), -1.5px -1.5px rgb(29, 25, 25);
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364)
+  background: var(--background-color);
 }
 
 @media print {

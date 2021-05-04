@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { Button } from '@material-ui/core';
 import styles from './SettingsForm.module.scss';
 import { parseMessageBackup, MessageBackup } from '../Upload/messageParser';
 
@@ -22,15 +23,25 @@ const SettingsForm: FunctionComponent<SettingsFormProps> = (props) => {
   
   return (
     <div className={styles['SettingsForm']}>
-      <input
-        type="file"
-        accept=".xml"
-        onChange={e => {
-          if (e.target && e.target.files && e.target.files[0]) {
-            handleFileChosen(e.target.files[0])
-          }
-        }}
-      />
+      <label htmlFor="file-input">
+        <input
+          hidden
+          id="file-input"
+          type="file"
+          accept=".xml"
+          onChange={e => {
+            if (e.target && e.target.files && e.target.files[0]) {
+              handleFileChosen(e.target.files[0])
+            }
+          }}
+        />
+        <Button
+          variant="outlined"
+          component="span"
+        >
+          Velg fil
+        </Button>
+      </label>
     </div>
   );
 }
