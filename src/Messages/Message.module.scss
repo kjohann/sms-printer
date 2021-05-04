@@ -2,7 +2,8 @@
   position: relative;
   break-inside: avoid;
   display: flex;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
+  padding-top: 1rem;
   height: 100%;
 
   &--right {
@@ -24,7 +25,7 @@
   &-bubble {
     max-width: 70%;
     border-radius: 0.75rem;
-    background: lightblue;
+    background: var(--message-bubble-color);
     padding: 0.5rem 1rem;
   }
 
@@ -35,14 +36,5 @@
   &-timestamp {
     font-size: 0.5rem;
     padding-top: 0.5rem;
-  }
-}
-
-.Mms {
-  &-content {
-    & > img {
-      width: 100%;
-      padding: 1rem 0;
-    }
   }
 }
